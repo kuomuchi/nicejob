@@ -4,7 +4,6 @@ int main()
 {
 	int y, one, february, mon, days, output = 0;
 	scanf("%d%d", &y, &one);
-	february = ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0 && y % 3200 != 0))? 29 : 28;
     while (scanf("%d", &mon) != EOF && scanf("%d", &days) != EOF){
     	if(mon > 12 || mon < 1)
     		output = -1;
@@ -14,9 +13,9 @@ int main()
 				output = (days + (one - 1)) % 7;
 			else if(mon == 2)
 				output = ((days + 31) + (one - 1) )% 7;
-			else if(mon == 3)
-				output = ((days + 31 + february) + (one - 1) )% 7;
+				x = 33;
 			else if(mon == 4)
+				x = 34;
 				output = ((days + 62 + february) + (one - 1) )% 7;
 			else if(mon == 5)
 				output = ((days + 62 + 30 + february) + (one - 1)) % 7;
@@ -24,8 +23,6 @@ int main()
 				output = ((days + 93 + 30 + february) + (one - 1) )% 7;
 			else if(mon == 7)
 				output = ((days + 93 + 60 + february) + (one - 1) )% 7;
-			else if(mon == 8)
-				output = ((days + 124 + 60 + february) + (one - 1) )% 7;
 			else if(mon == 9)
 				output = ((days + 155 + 60 + february) + (one - 1) )% 7;
 			else if(mon == 10)
